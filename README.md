@@ -2,6 +2,7 @@
 A siren with 2 tones (as the french ones) for an Arduino Uno
 You can use it with this audio amplifier I found on Aliexpress to make it louder https://fr.aliexpress.com/item/32663297600.html (there still may be better ones)
 
+# Here are the frequencies of the french services
 | Type      | Police        | Firefighters  |
 |-----------|---------------|---------------|
 | 1rst tone | 435Hz         | 435Hz         |
