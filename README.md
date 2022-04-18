@@ -13,3 +13,10 @@ You can use it with this audio amplifier I found on Aliexpress to make it louder
 The 1rst version of the siren is very simple, there's only 1 siren type, and you only need an arduino and a buzzer/speaker. You can use an Arduino Uno, NANO, or any other.
 Here is how to set it up:
 <img src="https://github.com/NANO-ck/arduino-siren/raw/main/siren-v1.PNG" alt="schema v1"/>
+
+# Siren V2
+The 2nd version of the siren provides multiple siren types, which you can choose by pressing a single button, which has the role of moving to the other siren type. 
+For this version, you will need 5 LEDs (or 4 if you remove the power indicator one), a resistor & a pushbutton (or any switch). If you want to make the sound louder, you can also add an amplifier.
+
+Here is how to set it up:
+*Image coming soon*
