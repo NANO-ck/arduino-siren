@@ -18,5 +18,7 @@ Here is how to set it up:
 The 2nd version of the siren provides multiple siren types, which you can choose by pressing a single button, which has the role of moving to the other siren type. 
 For this version, you will need 5 LEDs (or 4 if you remove the power indicator one), a resistor & a pushbutton (or any switch). If you want to make the sound louder, you can also add an amplifier.
 
+Credits: To make this 2nd version, and to bypass a problem I struggled with, I used this project to inspire me: https://www.tinkercad.com/things/gzWORQfpPWl-siren-system-
+
 Here is how to set it up:
 *Image coming soon*
