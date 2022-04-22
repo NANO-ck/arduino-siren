@@ -22,9 +22,3 @@ Credits: To make this 2nd version, and to bypass a problem I struggled with, I u
 
 Here is how to set it up:
 <img src="https://github.com/NANO-ck/arduino-siren/raw/main/siren-v2.PNG" alt="schema v2"/>
-
-# Siren V3
-The third version of the siren is the same as the 2nd, but it has an LED display to display the actual siren
-
-Here is how to set it up:
-<img src="https://github.com/NANO-ck/arduino-siren/raw/main/siren-v3.PNG" alt="schema v3"/>
