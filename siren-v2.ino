@@ -53,14 +53,46 @@ void loop()
       tone(speaker, 580);
     }
   }
+
+  if(select_type == 3) // French EMS
+  {
+    delay(140); // Each tone (low and high) last 1/2 second
+    if(period_indicator == 0)
+    {
+      period_indicator = 1;
+      tone(speaker, 420);
+    }
+    else if (period_indicator == 1) {
+      period_indicator = 2;
+      tone(speaker, 516);
+    }
+    else if (period_indicator == 2) {
+      period_indicator = 3;
+      tone(speaker, 420);
+    }
+    else
+    {
+      period_indicator = 0;
+      k = 700;
+      noTone(speaker);
+      while((k+=1) < 1200) // To make a crescendo to 1200Hz
+      {
+        delayMicroseconds(3000);
+        if(select_type == 4)
+        {
+          break;
+        }
+      }
+    }
+  }
   
-  if(select_type == 3) // American Yelp
+  if(select_type == 4) // American Yelp
   {
     while((k+=1) < 1200) // To make a crescendo to 1200Hz
     {
       tone(speaker, k);
       delayMicroseconds(100);
-      if(select_type == 4)
+      if(select_type == 5)
       {
         break;
       }
@@ -70,7 +102,7 @@ void loop()
     {
       tone(speaker, k);
       delayMicroseconds(100);
-      if(select_type == 4)
+      if(select_type == 5)
       {
         break;
       }
@@ -78,7 +110,7 @@ void loop()
     delayMicroseconds(250);
   }
   
-  if(select_type == 4)  // Automatic siren
+  if(select_type == 5)  // Automatic siren
   {
     // Between each period: Horn
     // Type 0: Yelp
@@ -291,17 +323,23 @@ void next() // This function is triggered whenever the button is pressed
       // Turn off LED 2 and turn on LED 3
       Serial.print("Siren Type: French Police\n");
     }
-    if(select_type == 3)  //Siren type 3: American Yelp
+    if(select_type == 3)  //Siren type 3: French EMS
+    {
+      // Turn off LED 4 and turn on LED 5
+      Serial.print("Siren Type: French EMS\n");
+    }
+    if(select_type == 4)  //Siren type 3: American Yelp
     {
       // Turn off LED 3 and turn on LED 4
       Serial.print("Siren Type: American Yelp\n");
     }
-    if(select_type == 4)  //Siren type 4: Automatic siren
+    if(select_type == 5)  //Siren type 4: Automatic siren
     {
       // Turn off LED 4 and turn on LED 5
       Serial.print("Siren Type: Automatic\n");
     }
-    if(select_type == 5) // There is no select type above 4, so we take it when it's at 5 to put it back to 1
+    
+    if(select_type == 6) // There is no select type above 4, so we take it when it's at 5 to put it back to 1
     { 
       // Turn off LED 5 and turn on LED 2
       select_type = 1;  // We change the siren type back to 1 to make a loop
